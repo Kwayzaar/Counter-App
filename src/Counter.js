@@ -16,13 +16,7 @@ function Counter() {
     setCount(0)
   }
 
-  const countSeconds = () => {
-    setCount(count += 1)
-  }
-
-  const startTimer = () => {
-    setCount(setInterval(1000))
-  }
+  const timer = () => setInterval(incrementCount, 1000)
 
     return(
       <div>
@@ -33,7 +27,8 @@ function Counter() {
             <button onClick={incrementCount}>+</button>
             <button onClick={decrementCount}>-</button>
           </div>
-          <button onClick={countSeconds}>Count Seconds</button>
+          <button onClick={timer}>Timer</button>
+          <button onClick>Stop</button>
           <button onClick={resetCount}>Reset</button>
         </div>
       </div>
